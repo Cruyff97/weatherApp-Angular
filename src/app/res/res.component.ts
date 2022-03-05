@@ -7,9 +7,10 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
 })
 export class ResComponent implements OnInit, OnChanges {
   @Input() results: any;
+  index: number = 0;
   icon: any;
   iconName!: string;
-  selectedDay!:any;
+  selectedDay:any=0;
   constructor() {}
 
   ngOnInit(): void {}
@@ -17,11 +18,20 @@ export class ResComponent implements OnInit, OnChanges {
   }
 
   
-  onDayClicked(nextdaysweather:any){
-   this.selectedDay= nextdaysweather
+  onDayClicked(  title:any, i:any, next_days_weather:any,  ){
+    console.log(next_days_weather, i)
+    const selected = this.results.find((e: any)=> e.title === title);
+    console.log("selected", selected)
+    selected.curr_day = i
+    this.selectedDay= i
+    //this.index = i;
+    //this.selectedDay= nextdaysweather
+
 }    
 onDeleteCard(result:any){
+  
   let index= this.results.indexOf(result);
+
    this.results.splice(index, 1);
 
 }

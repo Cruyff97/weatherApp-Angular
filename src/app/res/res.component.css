@@ -1,6 +1,9 @@
 .results {
   display: flex;
 }
+.result{
+    margin: 10px;
+}
 
 mat-card-title{
     display: flex;
@@ -64,7 +67,7 @@ mat-card{
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .clicked{
-    background-color: aqua;
+    background-color: #2f6ed3;
 }
 mat-icon:hover{
   color:   #ca4216;
