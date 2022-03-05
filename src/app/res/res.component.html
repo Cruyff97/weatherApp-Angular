@@ -1,6 +1,6 @@
 <ng-container class="results">
   
-  <div  class="columns is-full-mobile">
+  <div  class="columns is-full-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
   <mat-card class="column result" *ngFor="let result of results; let i = index">
       <div class="last-update ">
         <div>
@@ -44,7 +44,7 @@
     <mat-card-content>
       <div class="next-days">
         <div
-        [class.clicked]="selectedDay === i"
+        [class.clicked]="i===result.curr_day"
         *ngFor="let next_days_weather of result.consolidated_weather; let i = index;"
         class="day"
         (click)="onDayClicked(result.title,i, next_days_weather )"

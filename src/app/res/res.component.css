@@ -46,6 +46,9 @@ font-size: 14px;
     justify-content: space-evenly;
     margin: 2px;
 }
+.day:hover{
+   background-color:  #2f6ed3;
+}
 .day{
     padding: 3px;
     margin: 4px;

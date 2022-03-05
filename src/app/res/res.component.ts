@@ -10,7 +10,6 @@ export class ResComponent implements OnInit, OnChanges {
   index: number = 0;
   icon: any;
   iconName!: string;
-  selectedDay:any=0;
   constructor() {}
 
   ngOnInit(): void {}
@@ -19,11 +18,13 @@ export class ResComponent implements OnInit, OnChanges {
 
   
   onDayClicked(  title:any, i:any, next_days_weather:any,  ){
-    console.log(next_days_weather, i)
+    console.log('days',next_days_weather.id)
+    
     const selected = this.results.find((e: any)=> e.title === title);
     console.log("selected", selected)
     selected.curr_day = i
-    this.selectedDay= i
+    
+
     //this.index = i;
     //this.selectedDay= nextdaysweather
 
