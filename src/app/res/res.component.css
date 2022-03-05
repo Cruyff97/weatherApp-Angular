@@ -1,9 +1,7 @@
 .results {
   display: flex;
 }
-.result{
-    margin: 10px;
-}
+
 mat-card-title{
     display: flex;
     flex-direction: row;
