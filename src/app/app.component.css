@@ -1,0 +1,13 @@
+h1{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+app-search-bar{
+    display: flex;
+    justify-content: center;  
+}
+app-res{
+    display: flex;
+    justify-content: center;  
+}

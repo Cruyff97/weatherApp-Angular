@@ -1,0 +1,18 @@
+<div class="div-search">
+  <form>
+    <mat-form-field class="example-form-field" appearance="fill">
+      <mat-label>Search</mat-label>
+      <input
+        autocomplete="off"
+        type="text"
+        matInput
+        placeholder="Search a city"
+        name="search"
+        [(ngModel)]="city"
+      />
+      <button mat-raised-button color="primary" (click)="searchWeather(city)">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+  </form>
+</div>

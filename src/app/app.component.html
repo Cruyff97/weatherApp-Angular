@@ -1,0 +1,8 @@
+<div class="header">
+    <strong>
+        <h1>Weather App</h1>
+    </strong>
+</div>
+    <app-search-bar (newResEvent)="resultFromSearch($event)"></app-search-bar>
+
+<app-res [results]="resultSearch"></app-res>
