@@ -1,10 +1,10 @@
 <ng-container class="results">
   
-  <div  class="columns is-full-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
-  <mat-card class="column result" *ngFor="let result of results; let i = index">
+  <div  class="columns is-desktop">
+  <mat-card class="column is-full-mobile " *ngFor="let result of results; let i = index">
       <div class="last-update ">
         <div>
-          <strong>{{result.consolidated_weather[result.curr_day].applicable_date | date : 'EEE'}}</strong>
+          <strong>{{result.consolidated_weather[result.curr_day].applicable_date | date : "EEEE" | dateNow}}</strong>
           <br />
          <p>last update: {{ result.consolidated_weather[result.curr_day].created | date: "short" }}</p> 
         </div>

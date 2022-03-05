@@ -59,6 +59,7 @@ font-size: 14px;
     -webkit-backdrop-filter: blur( 6px );
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.3);
+    
 }
 
 mat-card{
@@ -68,6 +69,9 @@ mat-card{
     -webkit-backdrop-filter: blur( 6px );
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.3);
+
+box-shadow:  20px 20px 60px #285eb3,
+             -20px -20px 60px #367ff3;
 }
 .clicked{
     background-color: #2f6ed3;

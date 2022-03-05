@@ -9,8 +9,9 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ResComponent } from './res/res.component';
+import { DateNowPipe } from './date-now.pipe';
 @NgModule({
-  declarations: [AppComponent, SearchBarComponent, ResComponent],
+  declarations: [AppComponent, SearchBarComponent, ResComponent, DateNowPipe],
   imports: [
     BrowserModule,
     AppRoutingModule,

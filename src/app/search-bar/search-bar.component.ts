@@ -14,7 +14,8 @@ export class SearchBarComponent implements OnInit {
   @Output() newResEvent = new EventEmitter();
   constructor(private weatherservice: WeatherService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   searchWeather(city: string) {
     console.log(city.substring(0,1).toUpperCase() + city.substring(1,city.length).toLocaleLowerCase())
