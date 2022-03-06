@@ -18,22 +18,31 @@ export class SearchBarComponent implements OnInit {
   }
 
   searchWeather(city: string) {
-    console.log(city.substring(0,1).toUpperCase() + city.substring(1,city.length).toLocaleLowerCase())
     const selected = this.arrResults.find((e: any)=> e.title === city.substring(0,1).toUpperCase() + city.substring(1,city.length).toLocaleLowerCase());
     if(selected){
       return;
     }
-    this.isLoading = true;
     this.weatherservice.getCity(city).subscribe((cityRes) => {
-      let woeid = cityRes[0].woeid;
+      this.isLoading = true;
+      let woeid = cityRes[0]?.woeid;
+      if(woeid==undefined){
+        this.isLoading = false;
+      }
       console.log(cityRes);
 
-      this.weatherservice.getWeather(woeid).subscribe((weatherRes) => {
-        weatherRes.curr_day = 0;
-        this.arrResults.push(weatherRes);
-        this.newResEvent.emit(this.arrResults);
-        this.isLoading = false;
-      });
+      this.weatherservice.getWeather(woeid).subscribe({
+        next: (weatherRes) => {
+          weatherRes.curr_day = 0;
+          this.arrResults.push(weatherRes);
+          this.newResEvent.emit(this.arrResults);
+          this.isLoading = false;
+        },
+        error: (error) => {
+          console.log(error);
+          this.isLoading = false;
+        }
+      }
+      );
     });
   }
 }
