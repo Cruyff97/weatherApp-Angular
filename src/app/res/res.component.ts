@@ -23,10 +23,8 @@ export class ResComponent implements OnInit, OnChanges {
     selected.curr_day = i
 }    
 onDeleteCard(result:any){
-  
   let index= this.results.indexOf(result);
-
-   this.results.splice(index, 1);
+  this.results.splice(index, 1);
 
 }
 

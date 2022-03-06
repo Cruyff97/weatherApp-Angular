@@ -17,3 +17,5 @@
     <strong><mat-error *ngIf="error">{{error}}</mat-error></strong>
   </form>
 </div>
+  <mat-progress-spinner mode="indeterminate" *ngIf="isLoading" [diameter]="50"
+  [strokeWidth]="2" ></mat-progress-spinner>

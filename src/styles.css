@@ -3,6 +3,7 @@
 html,
 body {
   background: linear-gradient(180deg,#2f6ed3 5%,#5095e4 20%,#5095e4 60%,#2f6ed3 95%);
+  color: aliceblue;
   height: 100vh;
 }
 body {

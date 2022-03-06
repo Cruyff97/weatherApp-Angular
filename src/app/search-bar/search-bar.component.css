@@ -8,3 +8,8 @@ button {
   right: -3px;
   width: 4.4em;
 }
+mat-progress-spinner{
+  z-index: 100;
+    position: absolute;
+    margin-top: 77px;
+}
