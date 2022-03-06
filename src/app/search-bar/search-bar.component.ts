@@ -9,6 +9,7 @@ import { Weather } from '../interfaces/weather';
 })
 export class SearchBarComponent implements OnInit {
   city: string = '';
+  error?:string;
   isLoading:boolean = false;
   arrResults:Array<Weather>=[];
   @Output() newResEvent = new EventEmitter();
@@ -38,7 +39,7 @@ export class SearchBarComponent implements OnInit {
           this.isLoading = false;
         },
         error: (error) => {
-          console.log(error);
+          this.error= 'Search another city'
           this.isLoading = false;
         }
       }

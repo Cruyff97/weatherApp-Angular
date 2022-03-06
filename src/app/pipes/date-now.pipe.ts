@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DateNowPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {  
+  transform(value: unknown): unknown {  
     const arrDays=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"] 
     const today = new Date();
 
