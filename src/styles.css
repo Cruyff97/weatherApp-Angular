@@ -2,17 +2,10 @@
 
 html,
 body {
+  background: linear-gradient(180deg,#2f6ed3 5%,#5095e4 20%,#5095e4 60%,#2f6ed3 95%);
   height: 100vh;
 }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background: linear-gradient(180deg,#2f6ed3 5%,#5095e4 20%,#5095e4 60%,#2f6ed3 95%);
 }
-
- 
-
-
-
-html, body { height: 100vh; }
-body { margin: 0; padding:0; font-family: Roboto, "Helvetica Neue", sans-serif; }

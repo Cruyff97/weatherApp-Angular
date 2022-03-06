@@ -9,6 +9,5 @@ export class AppComponent {
   resultSearch: any = [];
   resultFromSearch(res: any) {
     this.resultSearch = res;
-    console.log(this.resultSearch);
   }
 }

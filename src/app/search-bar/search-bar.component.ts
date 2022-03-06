@@ -29,10 +29,11 @@ export class SearchBarComponent implements OnInit {
       if(woeid==undefined){
         this.isLoading = false;
       }
-      console.log(cityRes);
+    
 
       this.weatherservice.getWeather(woeid).subscribe({
         next: (weatherRes) => {
+          this.error='';
           weatherRes.curr_day = 0;
           this.arrResults.push(weatherRes);
           this.newResEvent.emit(this.arrResults);
