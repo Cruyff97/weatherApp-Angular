@@ -11,7 +11,13 @@ import { ResComponent } from './res/res.component';
 import { DateNowPipe } from './pipes/date-now.pipe';
 import { DebounceClickDirective } from './modules/directives/debounce-time';
 @NgModule({
-  declarations: [AppComponent, SearchBarComponent, ResComponent, DateNowPipe, DebounceClickDirective],
+  declarations: [
+    AppComponent,
+    SearchBarComponent,
+    ResComponent,
+    DateNowPipe,
+    DebounceClickDirective,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

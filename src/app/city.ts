@@ -1,2 +1,1 @@
-export interface City {
-}
+export interface City {}

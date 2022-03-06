@@ -1,4 +1,3 @@
-
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 @Component({
   selector: 'app-res',
@@ -12,21 +11,14 @@ export class ResComponent implements OnInit, OnChanges {
   iconName!: string;
   constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  ngOnChanges(): void {}
+  onDayClicked(title: any, i: any) {
+    const selected = this.results.find((e: any) => e.title === title);
+    selected.curr_day = i;
   }
-  ngOnChanges(): void {
+  onDeleteCard(result: any) {
+    let index = this.results.indexOf(result);
+    this.results.splice(index, 1);
   }
-
-  
-  onDayClicked(  title:any, i:any){
-    const selected = this.results.find((e: any)=> e.title === title);
-    selected.curr_day = i
-}    
-onDeleteCard(result:any){
-  let index= this.results.indexOf(result);
-  this.results.splice(index, 1);
-
 }
-
-  }
-

@@ -15,10 +15,9 @@ export class WeatherService {
       `https://api.codetabs.com/v1/proxy/?quest=${this.rootURL}/location/search/?query=${city}`
     );
   }
-  getWeather(woeid:any){
+  getWeather(woeid: any) {
     return this.http.get<Weather>(
       `https://api.codetabs.com/v1/proxy/?quest=${this.rootURL}/location/${woeid}`
-    )
-    }
-
+    );
+  }
 }

@@ -10,12 +10,25 @@
         name="search"
         [(ngModel)]="city"
       />
-      <button mat-raised-button color="primary" appDebounceClick (debounceClick)="searchWeather(city)" [debounceTime]="1000" [disabled]="isLoading">
-        <mat-icon >search</mat-icon>
+      <button
+        mat-raised-button
+        color="primary"
+        appDebounceClick
+        (debounceClick)="searchWeather(city)"
+        [debounceTime]="1000"
+        [disabled]="isLoading"
+      >
+        <mat-icon>search</mat-icon>
       </button>
     </mat-form-field>
-    <strong><mat-error *ngIf="error">{{error}}</mat-error></strong>
+    <strong
+      ><mat-error *ngIf="error">{{ error }}</mat-error></strong
+    >
   </form>
 </div>
-  <mat-progress-spinner mode="indeterminate" *ngIf="isLoading" [diameter]="50"
-  [strokeWidth]="2" ></mat-progress-spinner>
+<mat-progress-spinner
+  mode="indeterminate"
+  *ngIf="isLoading"
+  [diameter]="50"
+  [strokeWidth]="2"
+></mat-progress-spinner>

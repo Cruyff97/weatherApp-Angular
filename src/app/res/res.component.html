@@ -1,71 +1,97 @@
 <ng-container class="results">
-  <div  class="columns is-desktop">
+  <div class="columns is-desktop">
     <div class="column" *ngFor="let result of results; let i = index">
       <mat-card>
-          <div class="container">
-          <div class="last-update ">
+        <div class="container">
+          <div class="last-update">
             <div>
-              <strong>{{result.consolidated_weather[result.curr_day].applicable_date | date : "EEEE" | dateNow}}</strong>
+              <strong>{{
+                result.consolidated_weather[result.curr_day].applicable_date
+                  | date: "EEEE"
+                  | dateNow
+              }}</strong>
               <br />
-              <p>last update: {{ result.consolidated_weather[result.curr_day].created | date: "short" }}</p> 
-          </div>
-          <button mat-icon-button (click)="onDeleteCard(result)"><mat-icon>delete</mat-icon></button>
-        </div>
-        <mat-card-title>
-          <img
-          src="https://www.metaweather.com/static/img/weather/{{
-            result.consolidated_weather[result.curr_day].weather_state_abbr
-          }}.svg"
-          width="60px"
-          alt="weather icon"
-          />
-          
-          <div class="city">
-            {{ result.title }}
-            <br />
-            <p class="weather-state">
-              {{ result.consolidated_weather[result.curr_day].weather_state_name }}
-            </p>
-          </div>
-          <div>
-            <p class="temp">
-              {{ result.consolidated_weather[result.curr_day].the_temp | number: "1.0-0" }}°
-            </p>
-            <div class="min-max">
               <p>
-                {{ result.consolidated_weather[result.curr_day].max_temp | number: "1.0-0" }}°
-              </p>
-              /
-              <p>
-                {{ result.consolidated_weather[result.curr_day].min_temp | number: "1.0-0" }}°
+                last update:
+                {{
+                  result.consolidated_weather[result.curr_day].created
+                    | date: "short"
+                }}
               </p>
             </div>
+            <button mat-icon-button (click)="onDeleteCard(result)">
+              <mat-icon>delete</mat-icon>
+            </button>
           </div>
-        </mat-card-title>
-        <mat-card-content>
-          <div class="next-days">
-            <div
-            [class.clicked]="i===result.curr_day"
-            *ngFor="let next_days_weather of result.consolidated_weather; let i = index;"
-            class="day"
-            (click)="onDayClicked(result.title,i)"
-            >
-            <p>
-              {{ next_days_weather.applicable_date | date: "EEE" }}
-            </p>
+          <mat-card-title>
             <img
-            src="https://www.metaweather.com/static/img/weather/{{
-              next_days_weather.weather_state_abbr
-            }}.svg"
-            width="30px"
-            alt="weather icon"
+              src="https://www.metaweather.com/static/img/weather/{{
+                result.consolidated_weather[result.curr_day].weather_state_abbr
+              }}.svg"
+              width="60px"
+              alt="weather icon"
             />
-          </div>
+
+            <div class="city">
+              {{ result.title }}
+              <br />
+              <p class="weather-state">
+                {{
+                  result.consolidated_weather[result.curr_day]
+                    .weather_state_name
+                }}
+              </p>
+            </div>
+            <div>
+              <p class="temp">
+                {{
+                  result.consolidated_weather[result.curr_day].the_temp
+                    | number: "1.0-0"
+                }}°
+              </p>
+              <div class="min-max">
+                <p>
+                  {{
+                    result.consolidated_weather[result.curr_day].max_temp
+                      | number: "1.0-0"
+                  }}°
+                </p>
+                /
+                <p>
+                  {{
+                    result.consolidated_weather[result.curr_day].min_temp
+                      | number: "1.0-0"
+                  }}°
+                </p>
+              </div>
+            </div>
+          </mat-card-title>
+          <mat-card-content>
+            <div class="next-days">
+              <div
+                [class.clicked]="i === result.curr_day"
+                *ngFor="
+                  let next_days_weather of result.consolidated_weather;
+                  let i = index
+                "
+                class="day"
+                (click)="onDayClicked(result.title, i)"
+              >
+                <p>
+                  {{ next_days_weather.applicable_date | date: "EEE" }}
+                </p>
+                <img
+                  src="https://www.metaweather.com/static/img/weather/{{
+                    next_days_weather.weather_state_abbr
+                  }}.svg"
+                  width="30px"
+                  alt="weather icon"
+                />
+              </div>
+            </div>
+          </mat-card-content>
         </div>
-      </mat-card-content>
-    </div>
-    </mat-card>
+      </mat-card>
     </div>
   </div>
-  </ng-container>
-  
+</ng-container>
