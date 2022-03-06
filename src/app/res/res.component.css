@@ -1,9 +1,6 @@
 .results {
   display: flex;
 }
-.result{
-    margin: 10px;
-}
 
 mat-card-title{
     display: flex;
@@ -78,4 +75,7 @@ box-shadow:  20px 20px 60px #285eb3,
 }
 mat-icon:hover{
   color:   #ca4216;
+}
+.column{
+    margin: 10px;
 }

@@ -22,17 +22,9 @@ export class ResComponent implements OnInit, OnChanges {
   }
 
   
-  onDayClicked(  title:any, i:any, next_days_weather:any,  ){
-    console.log('days',next_days_weather.id)
-    
+  onDayClicked(  title:any, i:any){
     const selected = this.results.find((e: any)=> e.title === title);
-    console.log("selected", selected)
     selected.curr_day = i
-    
-
-    //this.index = i;
-    //this.selectedDay= nextdaysweather
-
 }    
 onDeleteCard(result:any){
   

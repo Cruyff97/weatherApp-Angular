@@ -7,7 +7,6 @@ import { Weather } from '../interfaces/weather';
   providedIn: 'root',
 })
 export class WeatherService {
-  private apiKey: string = 'e201cefb5811db9fbcdfe6e5c552dc3c';
   private rootURL = `https://www.metaweather.com/api`;
   results: any;
   constructor(public http: HttpClient) {}
@@ -20,11 +19,6 @@ export class WeatherService {
     return this.http.get<Weather>(
       `https://api.codetabs.com/v1/proxy/?quest=${this.rootURL}/location/${woeid}`
     )
-  }
-  getRes() {
-    return this.results;
-  }
-  getIcon(icon: string) {
-    return `http://openweathermap.org/img/wn/${icon}.png`;
-  }
+    }
+
 }

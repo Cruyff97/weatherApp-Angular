@@ -47,7 +47,7 @@
         [class.clicked]="i===result.curr_day"
         *ngFor="let next_days_weather of result.consolidated_weather; let i = index;"
         class="day"
-        (click)="onDayClicked(result.title,i, next_days_weather )"
+        (click)="onDayClicked(result.title,i)"
         >
         <p>
           {{ next_days_weather.applicable_date | date: "EEE" }}
