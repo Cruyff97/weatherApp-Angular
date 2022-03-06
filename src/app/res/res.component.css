@@ -69,6 +69,7 @@ mat-card{
 
 box-shadow:  20px 20px 60px #285eb3,
              -20px -20px 60px #367ff3;
+             margin: 6px;
 }
 .clicked{
     background-color: #2f6ed3;
@@ -76,6 +77,18 @@ box-shadow:  20px 20px 60px #285eb3,
 mat-icon:hover{
   color:   #ca4216;
 }
-.column{
+
+.container{
     margin: 10px;
+}
+.columns{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.column{
+    max-width:fit-content;
 }

@@ -10,8 +10,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ResComponent } from './res/res.component';
 import { DateNowPipe } from './date-now.pipe';
+import { DebounceClickDirective } from './modules/directives/debounce-time';
 @NgModule({
-  declarations: [AppComponent, SearchBarComponent, ResComponent, DateNowPipe],
+  declarations: [AppComponent, SearchBarComponent, ResComponent, DateNowPipe, DebounceClickDirective],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -20,6 +21,7 @@ import { DateNowPipe } from './date-now.pipe';
     MaterialModule,
     FormsModule,
   ],
+  exports: [DebounceClickDirective],
   providers: [],
   bootstrap: [AppComponent],
 })

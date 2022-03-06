@@ -10,7 +10,7 @@
         name="search"
         [(ngModel)]="city"
       />
-      <button mat-raised-button color="primary" (click)="searchWeather(city)" [disabled]="isLoading">
+      <button mat-raised-button color="primary" appDebounceClick (debounceClick)="searchWeather(city)" [debounceTime]="1000" [disabled]="isLoading">
         <mat-icon >search</mat-icon>
       </button>
     </mat-form-field>

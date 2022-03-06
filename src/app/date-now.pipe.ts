@@ -6,13 +6,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class DateNowPipe implements PipeTransform {
 
   transform(value: unknown, ...args: unknown[]): unknown {  
-    const arrDays=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"] 
+    const arrDays=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"] 
     const today = new Date();
 
-if(value === arrDays[today.getDay()-1] ){
+if(value === arrDays[today.getDay()] ){
   return 'Today'
 }
-if(value===arrDays[today.getDay()]){
+if(value===arrDays[(today.getDay())+1]){
   return 'Tomorrow'
 }
     return value;

@@ -13,10 +13,6 @@ export class ResComponent implements OnInit, OnChanges {
   constructor() {}
 
   ngOnInit(): void {
-    const arrDays=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"] 
-    const today = new Date();
-    const date = (today.getMonth()+1)+'/'+Number(today.getDate()+1)+"/"+today.getFullYear();
-    console.log(arrDays[today.getDay()]);
   }
   ngOnChanges(): void {
   }
