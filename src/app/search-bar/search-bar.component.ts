@@ -25,6 +25,7 @@ export class SearchBarComponent implements OnInit {
           city.substring(1, city.length).toLocaleLowerCase()
     );
     if (selected) {
+      this.error='You already searched for this city';
       return;
     }
     this.weatherservice.getCity(city).subscribe((cityRes) => {
