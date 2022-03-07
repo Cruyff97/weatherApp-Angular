@@ -37,6 +37,7 @@ mat-card-title {
   justify-content: space-between;
 }
 .next-days {
+  cursor: pointer;
   margin-top: 10px;
   display: flex;
   justify-content: space-evenly;
